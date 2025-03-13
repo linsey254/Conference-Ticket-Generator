@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Ticket Generator</title>
+    <link rel="stylesheet" href="CTG.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Create Your Conference Ticket</h2>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+                <label for="track">Conference Track</label>
+                <select id="track">
+                    <option value="tech">Technology</option>
+                    <option value="design">Design</option>
+                    <option value="business">Business</option>
+                    <option value="startup">Startups</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Primary Color</label>
+                <div class="color-picker">
+                    <div class="color-option" style="background: #2196F3;" data-color="#2196F3"></div>
+                    <div class="color-option" style="background: #E91E63;" data-color="#E91E63"></div>
+                    <div class="color-option" style="background: #4CAF50;" data-color="#4CAF50"></div>
+                    <div class="color-option" style="background: #FF9800;" data-color="#FF9800"></div>
+                    <div class="color-option" style="background: #6a5acd;" data-color="#6a5acd"></div>
+                </div>
+
+            </div>
+            <button onclick="generateTicket()">Generate Ticket</button>
+        </div>
+
+        <div class="ticket-preview">
+            <div class="ticket-header">
+                <h1 class="event-title">Future Tech Summit 2025</h1>
+                <p>October 15-17 • Zetech University, Mang'u Campus</p>
+            </div>
+            <div class="attendee-info">
+                <h2 id="previewName">Attendee Name</h2>
+                <p id="previewEmail">email@example.com</p>
+                <p id="previewTrack">Track: Technology</p>
+            </div>
+            <div class="ticket-details">
+                <div class="detail-item">
+                    <strong>Date:</strong> 15-17 Oct 2025
+                </div>
+                <div class="detail-item">
+                    <strong>Venue:</strong> Auditorium
+                </div>
+                <div class="detail-item">
+                    <strong>Ticket Type:</strong> VIP Pass
+                </div>
+                <div class="detail-item">
+                    <strong>Seat:</strong> A12
+                </div>
+            </div>
+            <div class="ticket-footer">
+                <div class="barcode"></div>
+                <img id="barcodeImage" src="barcode.png">
+                <i class="fas fa-ticket-alt ticket-icon"></i>
+            </div>
+        </div>
+    </div>
+    <script src="CTG.js"></script>
+</body>
+</html>
